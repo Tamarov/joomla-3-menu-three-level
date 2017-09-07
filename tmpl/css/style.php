@@ -136,25 +136,4 @@
 		font-size:15px !important;
 		color:#6f83b5;
 	}
-
-	.em-lang-switch.blue-lang-switch .em-open-lang-switch {
-		width: 40px;
-		height: 30px;
-		right: 10px;
-		margin-top: -11px;
-		border: 0px;
-	}
-	.em-lang-switch.blue-lang-switch ul {
-		right: 10px;
-		top: 0px;
-		border-radius: 0px;
-	}
-	.em-lang-switch ul {
-		position: absolute;
-		right: 10px;
-		top: 0px;
-		display: inline-block;
-		background: #2b96fb;
-		z-index: 199;
-	}
 </style>
