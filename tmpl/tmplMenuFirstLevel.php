@@ -28,5 +28,65 @@
 		?>
 			</ul>
 		</div>
+		<?php
+			$document = &JFactory::getDocument();
+			$renderer = $document->loadRenderer('modules');
+			$options = array('style' => 'xhtml');
+			$position = 'topRegister';
+		?>
+		<style>
+			.topMenuRegister{
+				width:300px !important;
+				float:left !important;
+			}
+			.topMenuRegister div div ul li{
+				padding: 10px 3px 0;
+			}
+			.topMenuLang{
+				width: 144px !important;
+			}
+			.topMenuLang div div div ul{
+				height: 33px;
+				top: 10px !important;
+				background-color:#2b96fb;
+			    z-index: 201 !important;
+			}
+			.topMenuLang div div div ul li{
+				height: 40px !important;
+				padding-top: 0px !important;
+				background-color: #2b96fb;
+				line-height: 40px;
+				margin-top: -12px;
+			    margin-left: 0px !important;
+				margin-right: 0px !important;
+			}
+			.topMenuLang div div div ul li:first-of-type{
+				height: 33px !important;
+				border-radius: 50px;
+				line-height: 33px;
+				margin-top: 0px !important;
+			}			
+			.topMenuLang div div div ul li:last-of-type{
+				border-radius: 0px 0px 15px 15px;
+			}
+			.topMenuLang div div div div{
+				border-bottom: none;
+				margin-top: -10px;
+			    z-index: 202 !important;
+			}
+		</style>
+		<div class="topMenuRegister">
+		<?php
+			echo $renderer->render($position, $options, null);
+		?>
+		</div>
+		<div class="topMenuLang col-lg-3 col-md-3 em-enter-block hidden-sm hidden-xs">
+			<div class="em-lang-switch blue-lang-switch">
+				<?php
+					$positionTwo = 'langSwitchMainAbout';
+					echo $renderer->render($positionTwo, $options, null);
+				?>
+			</div>
+		</div>
 	</div>
 </div>

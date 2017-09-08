@@ -51,11 +51,13 @@
 		}
 		$prevLevel = $value['level'];
 	}
+	
 /*Шаблон для первого уровня меню*/
 	
 	require_once __DIR__.'/tmplMenuFirstLevel.php';
 
 /*Шаблон для второго и третьего уровня меню*/
+	
 ?>
 <div id="top-three-menu-second-1" 
 	onmouseover="showFirstMenu('top-three-menu-second-1', topMenuSecondId, '0')" 
