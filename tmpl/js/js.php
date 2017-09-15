@@ -4,6 +4,7 @@
 <script>
 	var hideTimers = {};
 	var topMenuSecondId = 0;
+	var topMenuSecondIdLi = "";
 	var topMenuThreeId = 0;
 	function displayMenu(objID, display){
 		var obj = document.getElementById(objID);
@@ -21,6 +22,7 @@
 	function showFirstMenu(objID, objIDSecond, objIDThree){
 		showMenu(objID);
 		showMenuTwoLeft(objIDSecond);
+		showMenuThreeLeft(objIDThree);
 		if(objIDThree != '0') hideMenuThreeLeft(objIDThree);
 	}
 	function hideFirstMenu(objID, objIDSecond, objIDThree){
@@ -43,7 +45,14 @@
 		var elem = document.getElementById(objIDThree);
 		var elemLi = elem.getElementsByTagName('li').length;
 		var elemClass = elem.getElementsByTagName('li')[0].className;
-		var heightThreeLvBlock = (elemLi*30)/2;
+		var heightThreeLvBlock = 0;
+		if(elemLi <= 20){
+			heightThreeLvBlock = (elemLi*30)/2;
+		}else if(elemLi > 20 && elemLi < 40){
+			heightThreeLvBlock = (elemLi*30)/3;
+		}else{
+			heightThreeLvBlock = (elemLi*30)/4;
+		}
 		var heightThreeLvBlockStr = heightThreeLvBlock + 'px';
 		
 		var elemSecond = document.getElementById(elemClass);
@@ -52,11 +61,10 @@
 		var heightSecondLvBlockStr = heightSecondLvBlock + 'px';
 		if(heightSecondLvBlock > heightThreeLvBlock){document.getElementById('menu-three-level-center-column').style.height = heightSecondLvBlockStr;}
 		if(heightSecondLvBlock < heightThreeLvBlock){document.getElementById('menu-three-level-center-column').style.height = heightThreeLvBlockStr;}
-		
-		
 		displayMenu(objIDThree, true);
 		clearTimeout(hideTimers[objIDThree]);
 		topMenuThreeId = objIDThree;
+		
 	}
 	function hideMenuThreeLeft(objIDThree){
 		var cmd = "displayMenu('"+objIDThree+"', false)";

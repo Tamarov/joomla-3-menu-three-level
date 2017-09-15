@@ -32,4 +32,28 @@
 			return $arr;
 		}
 	}
+
+	/*
+	*
+	*Создаем позиции для подключения сторонних модулей
+	*
+	*/
+	$document = &JFactory::getDocument();
+	$renderer = $document->loadRenderer('modules');
+	$options = array('style' => 'xhtml');
+	$position = 'topRegister';
+	$positionTwo = 'langSwitchNewMenu';
+
+
+	function setDivUlElementsThreeLevel ($keyOpenDiv, $idDivElement5, $idDivElement6){
+		if($idDivElement5 != $keyOpenDiv){
+			if($keyOpenDiv == 0){
+				echo "<div id='second".$idDivElement6."' style='display:none;'><ul>";
+			}else if($keyOpenDiv != $idDivElement6){
+				echo "</ul></div><div id='second".$idDivElement6."' style='display:none;'><ul>";
+			}
+			return $idDivElement6;
+		}
+	}
+
 ?>

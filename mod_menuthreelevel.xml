@@ -30,7 +30,6 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field name="menutype" type="menu" label="MOD_MENUTHREELEVEL_MENUTYPE_LABEL" description="MOD_MENUTHREELEVEL_MENUTYPE_DESC"/>
-				<field name="colorFont" type="text" default="#fff" label="Базовый цвет шрифта" description="Базовый цвет шрифта"/>
 			</fieldset>
 		</fields>
 	</config>

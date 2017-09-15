@@ -22,7 +22,9 @@
 							onmouseout="hideMenuThreeLeft(<?php echo "'second".$arraySecondLevelMenu[$key][0]."'"; ?>)"
 						<?php endif; ?>
 					>
-						<a class="top-three-menu-first" href="<?php echo $arraySecondLevelMenu[$key][2]; ?>/"><?php echo $arraySecondLevelMenu[$key][1]; ?></a>
+						<a class="top-three-menu-first" href="<?php echo $arraySecondLevelMenu[$key][2]; ?>/">
+							<?php echo $arraySecondLevelMenu[$key][1]; ?>
+						</a>
 					</li>
 			<?php
 				endforeach;
